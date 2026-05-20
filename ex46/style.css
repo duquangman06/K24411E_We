@@ -1,0 +1,84 @@
+body {
+    background-color: #d9d9d9;
+    font-family: Times New Roman;
+}
+
+.container {
+    width: 900px;
+    margin: auto;
+    background-color: #f4b97a;
+    border: 2px solid blue;
+}
+
+.header {
+    text-align: center;
+    padding: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    font-style: italic;
+}
+
+.weather-title {
+    color: blue;
+    text-decoration: underline;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.header p {
+    margin: 2px;
+    font-size: 13px;
+}
+
+.main {
+    display: flex;
+}
+
+.content {
+    width: 75%;
+    padding: 10px;
+}
+
+.content h2 {
+    color: purple;
+}
+
+.top-img {
+    float: right;
+    width: 250px;
+    height: 180px;
+    margin-left: 10px;
+}
+
+.bottom-img {
+    float: left;
+    width: 220px;
+    height: 150px;
+    margin-right: 10px;
+}
+
+.content p {
+    text-align: justify;
+    font-size: 15px;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #7fffd4;
+    padding: 10px;
+}
+
+.sidebar h3 {
+    color: purple;
+    margin-top: 10px;
+}
+
+.sidebar a {
+    display: block;
+    color: blue;
+    margin: 5px 0;
+    text-decoration: underline;
+    font-size: 14px;
+}

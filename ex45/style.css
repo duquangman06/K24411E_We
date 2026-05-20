@@ -20,6 +20,12 @@ body{
     margin: 0;
     font-weight: lighter;
 }
+.header h3{
+    font-size: 60px;
+    color: #444;
+    margin: 0;
+    font-weight: lighter;
+}
 .online{
     position: absolute;
     top: 10px;

@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Online Classified</title>
+    </head>
+
+    <body style="display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background-color: #eeeeee;">
+
+        <div style="width: 500px; background-color: #ccffff; border: 2px solid blue; padding: 20px;">
+
+            <form name="classified_form">
+                <h1 style="color: red;">
+                    Online Classifieds Search Form
+                </h1>
+
+                <hr>
+                <p>
+                    <b>1) Search for a classified in the following sections:</b>
+                </p>
+
+                <table cellpadding="5">
+
+                    <tr>
+                        <td>
+                            <input type="radio" name="section">
+                            Employment
+                        </td>
+
+                        <td>
+                            <input type="radio" name="section">
+                            Personal
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="radio" name="section" checked>
+                            For Sale
+                        </td>
+
+                        <td>
+                            <input type="radio" name="section">
+                            Miscellaneous
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="radio" name="section">
+                            Housing
+                        </td>
+
+                        <td>
+                            <input type="radio" name="section">
+                            All of the above
+                        </td>
+                    </tr>
+
+                </table>
+                <p>
+                    <b>2) Search the following publications:</b>
+                </p>
+
+                <table cellpadding="5">
+
+                    <tr>
+                        <td>
+                            <input type="checkbox" checked>
+                            Midwest Times
+                        </td>
+
+                        <td>
+                            <input type="checkbox">
+                            Modern News
+                        </td>
+
+                        <td>
+                            <input type="checkbox">
+                            Employment Today
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="checkbox" checked>
+                            Great Lakes Classifieds
+                        </td>
+
+                        <td>
+                            <input type="checkbox">
+                            Middletown Daily
+                        </td>
+
+                        <td>
+                            <input type="checkbox">
+                            Cashtown Daily News
+                        </td>
+                    </tr>
+
+                </table>
+                <p>
+                    <b>3) From</b>
+
+                    <input type="text" placeholder="mm/dd/yy">
+
+                    <b>to</b>
+
+                    <input type="text" placeholder="mm/dd/yy">
+                </p>
+                <p>
+                    <b>4) Enter a few keywords to describe the classified.</b>
+                </p>
+
+                <input type="text" style="width: 420px;">
+                <p>
+                    <b>5) Click one of the options below:</b>
+                </p>
+
+                <table cellpadding="10">
+
+                    <tr>
+                        <td style="text-align: center;">
+
+                            <input 
+                                type="button"
+                                value="✔"
+                                style="font-size: 30px; color: green;"
+                                onclick="alert('Search simulation')"
+                            >
+
+                            <br>
+
+                            <span style="color: green;">
+                                <b>Search</b>
+                            </span>
+
+                        </td>
+                        <td style="text-align: center;">
+
+                            <input 
+                                type="button"
+                                value="?"
+                                style="font-size: 30px; color: blue;"
+                                onclick="alert('Help page display')"
+                            >
+
+                            <br>
+
+                            <span style="color: blue;">
+                                <b>Help</b>
+                            </span>
+
+                        </td>
+                        <td style="text-align: center;">
+
+                            <input 
+                                type="reset"
+                                value="✖"
+                                style="font-size: 30px; color: deeppink;"
+                            >
+
+                            <br>
+
+                            <span style="color: deeppink;">
+                                <b>Cancel</b>
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </form>
+
+        </div>
+
+    </body>
+</html>

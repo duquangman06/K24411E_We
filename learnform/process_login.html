@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title>
+        
+    </head>
+    <body>
+        <h1>Login successful!</h1>
+        <div id="result" style="font-family: Arial, sans-serif; margin-top: 1rem;"></div>
+        <script>
+            function escapeHtml(str) {
+                if (!str) return '';
+                return str.replace(/&/g, '&amp;')
+                          .replace(/</g, '&lt;')
+                          .replace(/>/g, '&gt;')
+                          .replace(/"/g, '&quot;')
+                          .replace(/'/g, '&#039;');
+            }
+
+            const params = new URLSearchParams(window.location.search);
+            const username = params.get('username');
+            const password = params.get('password');
+            const resultEl = document.getElementById('result');
+
+            if (username && password) {
+                const userText = document.createElement('p');
+                userText.textContent = 'Username: ' + username;
+
+                const passText = document.createElement('p');
+                passText.textContent = 'Password: ' + password;
+
+                resultEl.appendChild(userText);
+                resultEl.appendChild(passText);
+            } else {
+                resultEl.textContent = 'No credentials provided.';
+            }
+        </script>
+    </body>
+</html>

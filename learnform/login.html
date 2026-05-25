@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title>
+        
+    </head>
+    <body style="display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0;">
+        <div style="width: 350px; border: 1px solid #ccc; padding: 10px;">
+        <form
+            action="process_login.html"
+            method="get"
+            name="login_form"
+        >
+            <table border="1" cellspacing="0" cellpadding="5">
+                <tr>
+                    <td rowspan="7">
+                    <img src="admin.png" alt="admin" width="150" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td  >Login system:</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="username">Username:</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="username" id="username" value="obama" required></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="password" id="password" value="123456" required></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="remember" id="remember" value="yes">
+                        <label for="remember">Remember me</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Login" style="background-image: url(images/login.png);">
+                        |
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        </div>
+        
+    </body>
+</html>

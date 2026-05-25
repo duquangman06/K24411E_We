@@ -1,0 +1,60 @@
+<html> 
+    <head>
+        <title> Tiêu đề trang</title>
+    </head>
+    <body>
+        <h1>Provinces</h1>
+        <form name="provinceForm">
+            <select name="provinces" id="provinces" onchange="updateSelectedProvince(this)">
+                <option value="hcm">Hồ Chí Minh</option>
+                <option value="hanoi">Hà Nội</option>
+                <option value="danang">Đà Nẵng</option>
+                <option value="cantho">Cần Thơ</option>
+                <option value="haiphong">Hải Phòng</option>
+                <option value="angiang">An Giang</option>
+                <option value="brvt">Bà Rịa - Vũng Tàu</option>
+                <option value="bacgiang">Bắc Giang</option>
+                <option value="bacninh">Bắc Ninh</option>
+                <option value="bentre">Bến Tre</option>
+                <option value="binhduong">Bình Dương</option>
+                <option value="binhdinh">Bình Định</option>
+                <option value="binhphuoc">Bình Phước</option>
+                <option value="binhthuan">Bình Thuận</option>
+                <option value="camau">Cà Mau</option>
+                <option value="caobang">Cao Bằng</option>
+                <option value="daklak">Đắk Lắk</option>
+                <option value="daknong">Đắk Nông</option>
+                <option value="dienbien">Điện Biên</option>
+                <option value="dongnai">Đồng Nai</option>
+                <option value="dongthap">Đồng Tháp</option>
+                <option value="gialai">Gia Lai</option>
+                <option value="hagiang">Hà Giang</option>
+                <option value="hanam">Hà Nam</option>
+                <option value="hatinh">Hà Tĩnh</option>
+                <option value="haiduong">Hải Dương</option>
+                <option value="haugiang">Hậu Giang</option>
+                <option value="hoabinh">Hòa Bình</option>
+                <option value="hungyen">Hưng Yên</option>
+                <option value="khanhhoa">Khánh Hòa</option>
+                <option value="kiengiang">Kiên Giang</option>
+                <option value="kontum">Kon Tum</option>
+                <option value="lamdong">Lâm Đồng</option>
+                <option value="langson">Lạng Sơn</option>
+                <option value="longan">Long An</option>
+                <option value="namdinh">Nam Định</option>
+                <option value="nghean">Nghệ An</option>
+            </select>
+            <p>Value of selected province:</p>
+            <input type="text" id="selectedProvince" name="selectedProvince" readonly>
+            <p>Name of selected province:</p>
+            <input type="text" id="selectedProvinceName" name="selectedProvinceName" readonly>
+        </form>
+        <script>
+            function updateSelectedProvince(select) {
+                document.getElementById('selectedProvince').value = select.value;
+                document.getElementById('selectedProvinceName').value = select.options[select.selectedIndex].text;
+            }
+            updateSelectedProvince(document.getElementById('provinces'));
+        </script>
+    </body>
+</html>

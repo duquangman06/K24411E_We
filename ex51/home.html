@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title> 
+        <style>
+            td{  color:White }
+        </style>
+        
+    </head>
+    <body justify-content: center; align-items: center; min-height: 100vh; margin: 0; background-color: #dddddd;">
+        <div style="width: 600px; background-color: #0a5c53; border: 2px solid blue; padding: 20px;">
+            <form name="register_form">
+                <img src="/ex51/Logo.gif" style="display: block; margin: 0 auto;">
+                <h1 style="text-align: center; color:azure">
+                   Newborn Registration
+                </h1>
+                <table cellpadding="5" cellspacing="0" style="margin: auto;">
+                    <tr>
+                        <td >Date:</td>
+                        <td colspan="3"> <input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td>1) Infant's first name:</td>
+                        <td><input type="text" ></td>
+                        <td>Last Name:</td>
+                        <td> <input type="text"> </td>
+                    </tr>
+
+                    <tr>
+                        <td>2) Medical Record #:</td>
+                        <td colspan="3">
+                            <input type="text" style="width: 300px;">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3) Date of birth:</td>
+                        <td colspan="3">
+                            <input type="date">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td >4) Birth Weight</td>
+                        <td colspan="3">
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >5) APGAR score</td>
+                        <td colspan="3">
+                            <input type="text" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6) Mother's First Name</td>
+                        <td>
+                            <input type="text" >
+                        </td>
+                        <td>Last Name:</td>
+                        <td>
+                            <input type="text" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7) Father's First Name</td>
+                        <td>
+                            <input type="text" >
+                        </td>
+                        <td>Last Name:</td>
+                        <td>
+                            <input type="text" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >8) Physical( check all that apply)</td>
+                        <td colspan="3">
+                            <select id="colorSelect" name="colorselect" size="5" onchange="colorform.selectedColor.value=this.value; colorform.selectedColor.style.backgroundColor=this.value;">
+                                <option value="Dr Man">Dr. Man</option>
+                                <option value="Dr Bill">Dr. Bill</option>
+                                <option value="Dr Smith">Dr. Smith</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: right;">
+                            <input 
+                                type="button" 
+                                value="Click to register"
+                                onclick="alert('Registration Successful!')">
+                        </td>
+                        <td colspan="2" style="text-align: left;">
+                             <input 
+                                type="reset" 
+                                value="Click to cancel">
+
+                        </td>
+                    </tr>
+
+                </table>
+        
+    </body>
+</html>

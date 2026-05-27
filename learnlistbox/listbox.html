@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title>
+        
+    </head>
+    <body>
+        <form name="colorform">
+        <h3> select background color</h3>
+        <select id="colorSelect" name="colorselect" size="5" onchange="colorform.selectedColor.value=this.value; colorform.selectedColor.style.backgroundColor=this.value;">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+            <option value="pink">Pink</option>
+        </select>
+        <p> Your select color is</p>
+        <input type="text" name="selectedColor" id="selectedColor" readonly>
+        </form>
+        <form name="imgForm">
+        <h3> select background image</h3>
+        <select id="imgSelect" name="imgSelect" size="5" onchange="document.getElementById('selectedImg').src=this.value;">
+            <option value="./logouel.png">UEL</option>
+            <option value="./logoueh.png">UEH</option>
+            <option value="./logovlu.png">VLU</option>
+        </select>
+        <p> Your select image is</p>
+        <img id="selectedImg" name="selectedImg" alt="No img selected"
+        style="width:200px;height:200px;">
+        </form>
+    </body>
+</html>

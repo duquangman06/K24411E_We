@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title>
+    </head>
+    <body style="display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background-color: #dddddd;">
+        <div style="width: 700px; background-color: #9fc5e8;  padding: 20px">
+            <form name="Travel Expense Report">
+                <img src="/ex50/DeLong.jpg" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" alt="DeLong">
+                <hr style="width: 80%;">
+                <h2 style="text-align: left; margin-top: 10px;">Travel Expense Report</h2>
+                <table cellpadding="5" cellspacing="0" style="width: 100%; margin: auto; border-collapse: collapse;">
+                    <tr>
+                        <td style="width: 30%;">1) FirstName:</td>
+                        <td style="width: 20%;"><input type="text" name="firstName" "></td>
+                        <td style="width: 20%;">LastName:</td>
+                        <td style="width: 30%;"><input type="text" name="lastName" "></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">2) Social Security Number:</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><input type="text" name="socialSecurityNumber" "></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">3) Department:</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <select name="department" style="width:50%">
+                                <option>Financial</option>
+                                <option>PĐT</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">4) Describe the purpose of your trip:</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"> <textarea rows="8" cols="75" name="tripPurpose"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">5) Itemize your travel expenses:</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <table border="1" cellpadding="5" cellspacing="0" style="width: 100%;">
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Description</th>
+                                    <th>Category</th>
+                                    <th>Amount</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="date" name="expenseDate1" style="width: 100%;"></td>
+                                    <td><input type="text" name="expenseDescription1" style="width: 100%;"></td>
+                                    <td>
+                                        <select style="width: 100%;">
+                                            <option>ScanMaster</option>
+                                            <option>Printer</option>
+                                            <option>Camera</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="number" name="expenseAmount1" step="0.01" style="width: 100%;"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="date" name="expenseDate2" style="width: 100%;"></td>
+                                    <td><input type="text" name="expenseDescription2" style="width: 100%;"></td>
+                                    <td>
+                                        <select style="width: 100%;">
+                                            <option>ScanMaster</option>
+                                            <option>Printer</option>
+                                            <option>Camera</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="number" name="expenseAmount2" step="0.01" style="width: 100%;"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="date" name="expenseDate3" style="width: 100%;"></td>
+                                    <td><input type="text" name="expenseDescription3" style="width: 100%;"></td>
+                                    <td>
+                                        <select style="width: 100%;">
+                                            <option>ScanMaster</option>
+                                            <option>Printer</option>
+                                            <option>Camera</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="number" name="expenseAmount3" step="0.01" style="width: 100%;"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="date" name="expenseDate4" style="width: 100%;"></td>
+                                    <td><input type="text" name="expenseDescription4" style="width: 100%;"></td>
+                                    <td>
+                                        <select style="width: 100%;">
+                                            <option>ScanMaster</option>
+                                            <option>Printer</option>
+                                            <option>Camera</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="number" name="expenseAmount4" step="0.01" style="width: 100%;"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">6) Have you submitted your receipts?</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <input type="radio" name="receiptsSubmitted" value="Yes"> Yes
+                            <input type="radio" name="receiptsSubmitted" value="No"> No
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input 
+                                type="button" 
+                                value="Click to register"
+                                onclick="alert('Registration Successful!')"
+                            >
+                        </td>
+                        <td>
+                            <input 
+                                type="reset" 
+                                value="Click to cancel"
+                            >
+
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

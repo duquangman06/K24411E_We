@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title>
+        <script>
+            function solveEquation() {
+                var a = parseFloat(document.getElementById("id_a").value);
+                var b = parseFloat(document.getElementById("id_b").value);
+                var result;
+                if (a === 0) {
+                    if (b === 0) {
+                        result = "Phương trình vô số nghiệm";
+                    } else {
+                        result = "Phương trình vô nghiệm";
+                    }
+                } else {
+                    result = "Nghiệm của phương trình là: x = " + (-b / a);
+                }
+                document.getElementById("id_result").innerText = result;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <h1> First degree equation </h1>
+            <p> Solve the equation ax + b = 0 </p>
+            <p> Input a, b </p> 
+            <table>
+                <tr>
+                    <td> a </td>
+                    
+                    <td><input type="text" id="id_a" name="id_a"></td>
+
+                </tr>
+                <tr>
+                    <td> b </td>
+                    <td><input type="text" id="id_b" name="id_b"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="Solve" onclick="solveEquation()">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p id="id_result"></p>
+                    </td>
+                </tr>
+                
+            </table>
+           
+            
+
+        </form>
+        
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title>
+        <script type="text/javascript">
+            function solveQuadraticEquation() {
+                var a = parseFloat(document.getElementById("a").value);
+                var b = parseFloat(document.getElementById("b").value);
+                var c = parseFloat(document.getElementById("c").value);
+                var discriminant = b * b - 4 * a * c;
+                var resultField = document.getElementById("result");
+                
+                if (discriminant > 0) {
+                    var root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                    var root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+                    resultField.value = "x1 = " + root1 + ", x2 = " + root2;
+                } else if (discriminant === 0) {
+                    var root = -b / (2 * a);
+                    resultField.value = "x1 = x2 = " + root;
+                } else {
+                    resultField.value = "No real roots";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <table border="1">
+                <tr>
+                    <td style="text-align: center;">a:</td>
+                    <td><input type="text" id="a" ></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">b:</td>
+                    <td><input type="text" id="b" ></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">c:</td>
+                    <td><input type="text" id="c" ></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">Result:</td>
+                    <td><input type="text" id="result" ></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align: center;">
+                        <input type="button" value="Solve" onclick="solveQuadraticEquation()">
+                        <input type="button" value="Clear" onclick="document.getElementById('a').value = ''; document.getElementById('b').value = ''; document.getElementById('c').value = ''; document.getElementById('result').value = '';">
+                    </td>
+                </tr>
+            </table>
+        </body>
+</html>

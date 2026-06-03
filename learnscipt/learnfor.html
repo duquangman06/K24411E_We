@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title>
+        
+    </head>
+    <body>
+        <p>Danh sách số từ 1 đến 100:</p>
+        <ol id="mylist"></ol>
+    </body>
+    <script type="text/javascript">
+        var mylist = document.getElementById("mylist");
+        for (var i = 1; i <= 100; i++) {
+            var li = document.createElement("li");
+            li.innerHTML = i;
+            mylist.appendChild(li);
+        }
+    </script>
+</html>

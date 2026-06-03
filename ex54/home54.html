@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title>
+        <script type="text/javascript">
+            function findMax() {
+                var a = parseFloat(document.getElementById("a").value);
+                var b = parseFloat(document.getElementById("b").value);
+                var c = parseFloat(document.getElementById("c").value);
+                var max = Math.max(a, b, c);
+                document.getElementById("result").value = max;
+            }
+
+            function findMin() {
+                var a = parseFloat(document.getElementById("a").value);
+                var b = parseFloat(document.getElementById("b").value);
+                var c = parseFloat(document.getElementById("c").value);
+                var min = Math.min(a, b, c);
+                document.getElementById("result").value = min;
+            }
+
+            function calculateSin() {
+                var a = parseFloat(document.getElementById("a").value);
+                var sinA = Math.sin(a);
+                document.getElementById("result").value = sinA;
+            }
+
+            function calculateCos() {
+                var a = parseFloat(document.getElementById("a").value);
+                var cosA = Math.cos(a);
+                document.getElementById("result").value = cosA;
+            }
+
+            function calculatePower() {
+                var a = parseFloat(document.getElementById("a").value);
+                var b = parseFloat(document.getElementById("b").value);
+                var power = Math.pow(a, b);
+                document.getElementById("result").value = power;
+            }
+        </script>
+    </head>
+    <body>
+        <table border="1">
+                <tr>
+                    <td style="text-align: center;">a:</td>
+                    <td><input type="text" id="a" ></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">b:</td>
+                    <td><input type="text" id="b" ></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">c:</td>
+                    <td><input type="text" id="c" ></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">Result:</td>
+                    <td><input type="text" id="result" ></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="button" value="MAX" onclick="findMax()">
+                        <input type="button" value="MIN" onclick="findMin()">
+                        <input type="button" value="sin(a)" onclick="calculateSin()">
+                        <input type="button" value="cos(a)" onclick="calculateCos()">
+                        <input type="button" value="a^b" onclick="calculatePower()">
+                    </td>
+                </tr>
+        </table>
+
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title>
+        <script>
+            function displayCustomerin4() {
+                // Function implementation
+                //alert("Name="+myform.name.value)
+                //alert("Name="+myform.getElementById("name").value)
+                var name= document.getElementById("name").value;
+                var customerType=document.getElementById("customerType").value;
+                divInfor=document.getElementById("customerinfor");
+                switch (customerType) {
+                    case "Potential":
+                        divInfor.innerHTML="Customer name: "+name+"<br>Customer type: Potential";
+                        divInfor.style.backgroundColor="lightblue";
+                        break;
+                    case "Member":
+                        divInfor.innerHTML="Customer name: "+name+"<br>Customer type: Member";
+                        divInfor.style.backgroundColor="lightgreen";
+                        break;
+                    case "VIP":
+                        divInfor.innerHTML="Customer name: "+name+"<br>Customer type: VIP";
+                        divInfor.style.backgroundColor="lightyellow";
+                        break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+       <form name="myform
+       " action="customer.html" method="post">
+           <label for="name">Name:</label>
+           <input type="text" id="name" name="name"><br><br>
+           Customer type:
+           <select name="customerType" id="customerType">
+               <option value="Potential">Potential</option>
+               <option value="Member">Member</option>
+               <option value="VIP">VIP</option>
+           </select><br><br>
+           <input type="button" value="Ok" onclick="displayCustomerin4()">
+       </form>
+       <div id="customerinfor" style="margin-top:1rem;"></div>
+    </body>
+</html>

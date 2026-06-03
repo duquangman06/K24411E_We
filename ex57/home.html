@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title>
+        <script type="text/javascript">
+            function calc1(){
+                document.getElementById("item1").value = document.getElementById("qty1").value * 19.95;
+                document.getElementById("item2").value = document.getElementById("qty2").value * 29.95;
+                document.getElementById("item3").value = document.getElementById("qty3").value * 199.95;
+            }
+            function sum(){
+                document.getElementById("total").value = parseFloat(document.getElementById("item1").value) + parseFloat(document.getElementById("item2").value) + parseFloat(document.getElementById("item3").value);
+            }
+        </script>
+    </head>
+    <body>
+       <table id="1">
+        <thead>
+            <tr>
+                <th>Part Number</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Item table</th>
+            </tr>
+        </thead>
+        <tbody id="mytablebody">
+            <tr>
+                <td>C112</td>
+                <td>Mouse</td>
+                <td>19.95</td>
+                <td><input type="text" id="qty1" onclick="calc1()" ></td>
+                <td><input type="text" id="item1" ></td>
+            </tr>
+                <tr>
+                    <td>C113</td>
+                    <td>Keyboard</td>
+                    <td>29.95</td>
+                    <td><input type="text" id="qty2" onclick="calc1()" ></td>
+                    <td><input type="text" id="item2" ></td>
+                </tr>
+                <tr>
+                    <td>C114</td>
+                    <td>Monitor</td>
+                    <td>199.95</td>
+                    <td><input type="text" id="qty3" onclick="calc1()" ></td>
+                    <td><input type="text" id="item3" ></td>
+                </tr>
+                <br></br>
+                <tr>
+                    <td colspan="4">Total</td>
+                    <td><input type="text" id="total" ></td>
+
+                </tr>
+                <tr>
+                    <td colspan="5"><input type="button" value="Sum" onclick="sum()" style="background-color: blue; color: white;"></td>
+                </tr>
+        </tbody>
+        </table>
+    </body>
+        
+    </body>
+</html>

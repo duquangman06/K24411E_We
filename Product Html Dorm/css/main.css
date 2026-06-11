@@ -1,0 +1,8 @@
+table,td,tr{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+tbody tr:hover{
+    background-color: #ff00d9;
+}
+td img{ cursor:pointer; }

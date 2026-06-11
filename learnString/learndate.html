@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Tiêu đề</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+                background: #111;
+            }
+
+            #my_digital_timer {
+                font-size: 4rem;
+                font-weight: 700;
+                text-align: center;
+                padding: 20px 30px;
+                border-radius: 16px;
+                background: rgba(255,255,255,0.08);
+                box-shadow: 0 0 40px rgba(0,0,0,0.3);
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="my_digital_timer"></div>
+        <script>
+            function padNumber(value) {
+                return value < 10 ? '0' + value : value;
+            }
+
+            function make_my_digital_timer() {
+                var my_digital_timer = document.getElementById('my_digital_timer');
+                var date = new Date();
+                var hours = padNumber(date.getHours());
+                var minutes = padNumber(date.getMinutes());
+                var seconds = padNumber(date.getSeconds());
+                my_digital_timer.textContent = hours + ':' + minutes + ':' + seconds;
+
+                var hue = (date.getSeconds() * 6) % 360;
+                my_digital_timer.style.color = 'hsl(' + hue + ', 100%, 65%)';
+            }
+
+            make_my_digital_timer();
+            setInterval(make_my_digital_timer, 1000);
+        </script>
+    </body>
+</html>

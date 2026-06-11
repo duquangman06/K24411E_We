@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title>
+        <script>
+            function getInfo() {
+                var uri = document.getElementById("uri").value;
+                var url = new URL(uri);
+                document.getElementById("protocol").textContent = url.protocol;
+                document.getElementById("host").textContent = url.host;
+                document.getElementById("port").textContent = url.port;
+                document.getElementById("query-id").textContent = url.searchParams.get("sourcedoc");
+                document.getElementById("name").textContent = url.searchParams.get("file");
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myform">
+            <p>URI</p>
+            <input type="text" name="uri" id="uri" maxlength="200"
+            value="https://ueleduvn-my.sharepoint.com/:p:/r/personal/mandqk24411e_st_uel_edu_vn/_layouts/15/doc2.aspx?sourcedoc=%7BCF0F9990-07F9-4398-9E8A-F29A6F422A8C%7D&file=09-Javascript%20Part%202.pptx&action=edit&mobileredirect=true&wdOrigin=OFFICEWEBAPPHOME.SHELL%2CAPPHOME-WEB.BANNER.UPLOAD&wdPreviousSession=74a5e9d9-b140-422d-8284-31f8ffe817ab&wdPreviousSessionSrc=AppHomeWeb&ct=1780897297596">
+            <button type="button" onclick="getInfo()"> Get Infor</button>
+
+            <p>Protocol: <span id="protocol" ></span></p>
+            <p>Host: <span id="host" ></span></p>
+            <p>Port: <span id="port" ></span></p>
+            <p>ID: <span id="query-id" ></span></p>
+            <p>Name: <span id="name" ></span></p>
+
+        </form>
+        
+    </body>
+</html>

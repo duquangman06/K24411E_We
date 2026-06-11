@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <table>
+
+        <tr>
+            <td>
+                <button onclick="addNode()">
+                    Add Node
+                </button>
+            </td>
+
+            <td>Content</td>
+
+            <td>
+                <input type="text" id="txtContent">
+            </td>
+
+            <td>Position</td>
+
+            <td>
+                <input type="number" id="txtPosition" min="1">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button onclick="removeNode()">
+                    Remove Node
+                </button>
+            </td>
+
+            <td></td>
+            <td></td>
+
+            <td>Position</td>
+
+            <td>
+                <input type="number" id="txtRemovePos" min="1">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button onclick="modifyNode()">
+                    Modify Node
+                </button>
+            </td>
+
+            <td>New Content</td>
+
+            <td>
+                <input type="text" id="txtNewContent">
+            </td>
+
+            <td>Position</td>
+
+            <td>
+                <input type="number" id="txtModifyPos" min="1">
+            </td>
+        </tr>
+
+    </table>
+
+    <div id="webNode">
+
+        <p><b>Web Node</b></p>
+
+        <ul id="nodeList">
+
+            <li>Data base</li>
+            <li>Web1</li>
+            <li>Web2</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

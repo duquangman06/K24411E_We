@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title>
+        <link rel="stylesheet" href="css/main.css">
+        <script>
+            var products = [
+                {id: 1, name: "Product A", price: 10.99},
+                {id: 2, name: "Product B", price: 19.99},
+                {id: 3, name: "Product C", price: 5.49}
+            ];
+        </script>
+    </head>
+    <body>
+        <div>
+            <h2>Product Form</h2>
+            <form id="productForm">
+                <label for="product_id">Product ID:</label>
+                <input type="text" id="product_id" name="product_id" readonly><br><br>
+                <label for="product_name">Product Name:</label>
+                <input type="text" id="product_name" name="product_name" required><br><br>
+                <label for="product_price">Product Price:</label>
+                <input type="number" id="product_price" name="product_price" step="0.01" required><br><br>
+            </form>
+        </div>
+        <table id="tbl_product">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>#action</th>
+                </tr>
+            </thead>
+            <tbody id="product_table_body"></tbody>
+        </table>
+        <script src="js/main.js"></script>
+        <script>
+            load_product_data(products);
+        </script>
+    </body>
+</html>

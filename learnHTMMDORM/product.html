@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title>
+        <link rel="stylesheet" href="css/main.css">
+        <script>
+            function process_save_product() {
+                productID=document.getElementById("productid").value;
+                productName=document.getElementById("productname").value;
+                // get product body
+                productbody=document.getElementById("product_table_body");
+                //create tr element
+                tr=document.createElement("tr");
+                //create td element for product id  
+                td_product_id=document.createElement("td");
+                td_id=document.createElement("td");
+                td_name=document.createElement("td");
+                //assign value for td element
+                td_id.innerHTML=productID;
+                td_name.innerHTML=productName;
+                //append td element to tr element
+                tr.appendChild(td_id);               
+                tr.appendChild(td_name);
+                //append tr element to product body
+                productbody.appendChild(tr);     
+            }
+        </script>
+        <script src="js/dataset.js"></script>
+        <script src="js/mainjs.js"></script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td> Product Name:</td>
+                <td> <input type ="text" name= "productname" id="productname"></td>
+            </tr>
+            <tr>
+                <td> Product ID:</td>
+                <td> <input type ="text" name= "productid" id="productid"></td>
+            </tr>
+        </table>
+        <button onclick="process_save_product()">Save Product</button>
+        <form>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                    </tr>
+                </thead>
+                <tbody id="product_table_body">
+        
+                </tbody>
+            </table>
+            <div id="pagination_controls" style="margin-top: 10px;">
+                <button type="button" id="prevBtn" onclick="prevPage()">Quay lại</button>
+                <span id="pageInfo"></span>
+                <button type="button" id="nextBtn" onclick="nextPage()">Tiếp theo</button>
+            </div>
+            <script>
+                initPagination();
+            </script>
+        </form>
+        
+    </body>
+</html>

@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title>
+    </head>
+    <script>
+        function saveCustomerInfo() {
+            var customerName = document.getElementById("customerName").value;
+            var customerID = document.getElementById("customerID").value;
+            var customerAddress = document.getElementById("customerAddress").value;
+            var day = document.getElementById("day").value;
+            var month = document.getElementById("month").value;
+            var year = document.getElementById("year").value;
+
+            if (customerName && customerID && customerAddress && day && month && year) {
+                var resultDiv = document.getElementById("resultInfo");
+                var birthday = day + "/" + month + "/" + year;
+                resultDiv.innerHTML = "<h3>Thông tin khách hàng được lưu:</h3>" +
+                    "<p><strong>Tên:</strong> " + customerName + "</p>" +
+                    "<p><strong>ID:</strong> " + customerID + "</p>" +
+                    "<p><strong>Địa chỉ:</strong> " + customerAddress + "</p>" +
+                    "<p><strong>Ngày sinh:</strong> " + birthday + "</p>" +
+                    "<p><strong>Loại khách hàng:</strong> " + document.getElementById("customerType").value + "</p>";
+                resultDiv.style.display = "block";
+            } else {
+                alert("Vui lòng điền đầy đủ thông tin.");
+            }
+        }
+    </script>
+    <script>
+        var customer_type =["Regular", "VIP", "Wholesale", "Online"];
+    </script>
+        
+    </head>
+    <body>
+        <form name="Save customer information">
+            <table>
+                <tr>
+                    <td>Customer Name</td>
+                    <td><input type="text" name="customerName" id="customerName"></td>
+                </tr>
+                <tr>
+                    <td>Customer ID</td>
+                    <td><input type="text" name="customerID" id="customerID"></td>
+                </tr>
+                <tr>
+                    <td>Customer Address</td>
+                    <td><input type="text" name="customerAddress" id="customerAddress"></td>
+                </tr>
+                <tr>
+                    <td>Customer Birthday</td>
+                    <td>
+                        <select id="day"></select>
+                        <select id="month"></select>
+                        <select id="year"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Customer Type</td>
+                    <td>
+                        <select id="customerType">
+                            <option value="">Select Type</option>
+                            <option value="Regular">Regular</option>
+                            <option value="VIP">VIP</option>
+                            <option value="Wholesale">Wholesale</option>
+                            <option value="Online">Online</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            </table>
+            </table>
+            <input type="button" value="Save Information" onclick="saveCustomerInfo()">
+        </form>
+        <div id="resultInfo" style="display:none; margin-top:20px; padding:15px; border:1px solid #ccc; background-color:#f0f0f0; border-radius:5px;"></div>
+        <script>
+            function load_date_for_birthday_selection () {
+                var daySelect = document.getElementById("day");
+                var monthSelect = document.getElementById("month");
+                var yearSelect = document.getElementById("year");
+
+                for (var i = 1; i <= 31; i++) {
+                    var option = document.createElement("option");
+                    option.value = i;
+                    option.textContent = i;
+                    daySelect.appendChild(option);
+                }
+
+                for (var j = 1; j <= 12; j++) {
+                    var option = document.createElement("option");
+                    option.value = j;
+                    option.textContent = j;
+                    monthSelect.appendChild(option);
+                }
+
+                var currentYear = new Date().getFullYear();
+                for (var k = currentYear; k >= 1900; k--) {
+                    var option = document.createElement("option");
+                    option.value = k;
+                    option.textContent = k;
+                    yearSelect.appendChild(option);
+                }
+            }
+            
+            // Gọi hàm để điền dữ liệu khi trang load
+            load_date_for_birthday_selection();
+            function show_customer_type() {
+                var customerTypeSelect = document.getElementById("customerType");
+                var selectedType = customerTypeSelect.value;
+                if (selectedType) {
+                    alert("Customer Type: " + selectedType);
+                }
+            }
+        </script>
+    </body>
+</html>

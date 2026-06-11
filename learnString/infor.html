@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title>
+        <script>
+            function make_fullname()
+            {
+                var fullname=myform.firstName.value+""
+                            +myform.middleName.value+""
+                            +myform.lastName.value+""
+                myform.fullname.value=fullname;
+                        
+            }
+        </script>
+        
+    </head>
+    <body>
+        <form name=" my form">
+            <table>
+                <tr>
+                    <td >First Name:</td>
+                    <td><input type="text" id="firstName" name="firstName" ></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">Last Name:</td>
+                    <td><input type="text" id="lastName" name="lastName" ></td>
+                </tr>
+                <tr>
+                    <td> Middle Name</td>
+                    <td> <input type="text" id="middleName" name="middleName" onchange="make_fullname();"></td>
+                </tr>
+
+            
+            </table>
+            
+        </form>
+        
+    </body>
+</html>

@@ -1,0 +1,175 @@
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Member Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Member Registration</h1>
+
+    <table class="form-table">
+
+        <tr>
+            <td>Name(*)</td>
+            <td>
+                <input type="text" id="txtName">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Birthday(*)</td>
+
+            <td>
+                Day:
+                <select id="day"></select>
+
+                Month:
+                <select id="month"></select>
+
+                Year:
+                <select id="year"></select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Gender(*)</td>
+
+            <td>
+                <input type="radio"
+                       name="gender"
+                       value="Man"
+                       checked>
+                Man
+
+                <input type="radio"
+                       name="gender"
+                       value="Woman">
+                Woman
+            </td>
+        </tr>
+
+        <tr>
+            <td>Email(*)</td>
+
+            <td>
+                <input type="text" id="txtEmail">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Your favorite:</td>
+
+            <td>
+
+                <input type="checkbox" value="Shopping">
+                Shopping
+                <br>
+
+                <input type="checkbox" value="Tourism">
+                Tourism
+                <br>
+
+                <input type="checkbox" value="Chat">
+                Chat
+                <br>
+
+                <input type="checkbox" value="Read a book">
+                Read a book
+                <br>
+
+                <input type="checkbox" value="Listening to music">
+                Listening to music
+
+            </td>
+        </tr>
+
+        <tr>
+
+            <td>Your favorite color:</td>
+
+            <td>
+
+                <div class="blue">
+                    <input type="radio"
+                           name="color"
+                           value="Blue"
+                           checked>
+                    Blue
+                </div>
+
+                <div class="red">
+                    <input type="radio"
+                           name="color"
+                           value="Red">
+                    Red
+                </div>
+
+                <div class="yellow">
+                    <input type="radio"
+                           name="color"
+                           value="Yellow">
+                    Yellow
+                </div>
+
+                <div class="green">
+                    <input type="radio"
+                           name="color"
+                           value="Green">
+                    Green
+                </div>
+
+                <div class="violet">
+                    <input type="radio"
+                           name="color"
+                           value="Violet">
+                    Violet
+                </div>
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td colspan="2">
+
+                <button onclick="registerMember()">
+                    Sign up
+                </button>
+
+                <button onclick="nextData()">
+                   Reset
+                </button>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+    <table id="tblMember">
+
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Birthday</th>
+            <th>Hobbies</th>
+            <th>Colors</th>
+        </tr>
+
+    </table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    width:700px;
+    margin:auto;
+    border:1px solid gray;
+    padding:20px;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+.form-table{
+    width:100%;
+}
+
+.form-table td{
+    padding:5px;
+    vertical-align:top;
+}
+
+#tblMember{
+    width:100%;
+    margin-top:20px;
+    border-collapse:collapse;
+}
+
+#tblMember th,
+#tblMember td{
+    border:1px solid black;
+    padding:5px;
+}
+
+#tblMember th{
+    background:navy;
+    color:white;
+}
+
+.blue{
+    color:blue;
+}
+
+.red{
+    color:red;
+}
+
+.yellow{
+    color:goldenrod;
+}
+
+.green{
+    color:green;
+}
+
+.violet{
+    color:purple;
+}
+
+button{
+    margin-right:10px;
+}

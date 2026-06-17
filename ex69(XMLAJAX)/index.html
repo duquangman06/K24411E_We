@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercise 69</title>
+
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+
+    <table border="1">
+
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th colspan="2"> <select id="drTitle" onchange="showEmployee()">
+    </select></th>
+            </tr>
+            <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+
+        <tbody id="bodyemployee">
+
+        </tbody>
+
+    </table>
+
+    <script>
+
+        loadTitle("XMLFile.xml");
+
+    </script>
+
+</body>
+
+</html>

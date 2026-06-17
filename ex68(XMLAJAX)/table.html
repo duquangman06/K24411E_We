@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title>
+
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <table border="1" >
+            <thead>
+        
+                <tr style="background-color:rgb(6, 95, 11)">
+                   <th >Artist</th> 
+                   <th >Title</th> 
+                  
+                </tr>
+            </thead>
+            <tbody id="bodyin4">
+            </tbody>
+        </table>
+        <script>
+            var dataset_path="cd_catalog.xml"
+            var bodycustomer=document.getElementById("bodyin4")
+            load_customer(dataset_path,bodyin4)
+        </script>
+
+
+        
+    </body>
+</html>

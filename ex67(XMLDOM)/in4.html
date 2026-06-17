@@ -1,0 +1,54 @@
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Student Detail</title>
+</head>
+
+<body>
+
+    
+
+    <table border="1">
+        <tr style="background-color:green">
+            <th colspan="2"> Student Information</th>
+        </tr>
+        <tr>
+            <td>Student ID</td>
+            <td id="id"></td>
+        </tr>
+
+        <tr>
+            <td>Name</td>
+            <td id="name"></td>
+        </tr>
+
+        <tr>
+            <td>Birthday</td>
+            <td id="birthday"></td>
+        </tr>
+
+        <tr>
+            <td>Gender</td>
+            <td id="gender"></td>
+        </tr>
+
+    </table>
+
+<script>
+document.getElementById("id").innerHTML =
+localStorage.getItem("id");
+
+document.getElementById("name").innerHTML =
+localStorage.getItem("name");
+
+document.getElementById("birthday").innerHTML =
+localStorage.getItem("birthday");
+
+document.getElementById("gender").innerHTML =
+localStorage.getItem("gender");
+
+</script>
+
+</body>
+</html>

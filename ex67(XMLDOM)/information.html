@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title>
+        <link rel="stylesheet" href="style.css">
+
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <table border="1" id="studentTable">
+            <thead>
+                <tr style="background-color: yellow">
+                    <th colspan="4">LIST OF STUDENTS</th>
+                </tr>
+                <tr style="background-color:rgb(6, 95, 11)">
+                   <th onclick="sortTable(0)">Student ID</th> 
+                   <th onclick="sortTable(1)">Student Name</th> 
+                   <th onclick="sortTable(2)">Birthday</th> 
+                   <th onclick="sortTable(3)">Gender</th> 
+                </tr>
+            </thead>
+            <tbody id="bodycustomer">
+            </tbody>
+        </table>
+        <script>
+            var dataset_path="data.xml"
+            var bodycustomer=document.getElementById("bodycustomer")
+            load_customer(dataset_path,bodycustomer)
+        </script>
+
+
+        
+    </body>
+</html>

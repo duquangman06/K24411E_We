@@ -1,0 +1,9 @@
+table{border-collapse: collapse;width: 70%;margin: auto;}
+
+th, td
+{border: 1px solid black;padding: 8px; text-align: center;}
+
+th
+{ color: rgb(6, 6, 6);cursor: pointer;}
+
+tbody tr:hover{background-color: yellow;}

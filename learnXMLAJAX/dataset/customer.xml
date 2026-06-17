@@ -1,0 +1,32 @@
+<customers>
+    <customer>
+        <id>1</id>
+        <name>John Doe</name>
+        <age>30</age>
+        <city>New York</city>
+    </customer>
+    <customer>
+        <id>2</id>
+        <name>Jane Smith</name>
+        <age>25</age>
+        <city>Los Angeles</city>
+    </customer>
+    <customer>
+        <id>3</id>
+        <name>Michael Johnson</name>
+        <age>35</age>
+        <city>Chicago</city>
+    </customer>
+    <customer>
+        <id>4</id>
+        <name>Emily Davis</name>
+        <age>28</age>
+        <city>Houston</city>
+    </customer>
+    <customer>
+        <id>5</id>
+        <name>David Wilson</name>
+        <age>40</age>
+        <city>Phoenix</city>
+    </customer>
+</customers>
